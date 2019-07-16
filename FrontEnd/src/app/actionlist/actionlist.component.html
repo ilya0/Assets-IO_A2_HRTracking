@@ -1,0 +1,82 @@
+<div>
+<H1>
+  Employee ID - {{FirstName}} {{ LastName}} {{ personId }}
+</H1>
+</div>
+
+<div style="padding-top:40px;">
+  <form *ngIf="employeeDataPopulated" [formGroup]="employeeData" (ngSubmit)="onSubmit()">
+    <label>
+      First Name
+      <input formControlName="FirstName">
+      <div *ngIf="submitted && employeeData.controls.message.errors" class="error">
+        <div *ngIf="employeeData.controls.message.errors.required">Asset ID is required</div>
+      </div>
+    </label>
+
+    <label>
+      Last Name
+      <input formControlName="LastName">
+      <div *ngIf="submitted && employeeData.controls.message.errors" class="error">
+        <div *ngIf="employeeData.controls.message.errors.required">Price Price Percent required</div>
+      </div>
+    </label>
+
+
+    <label>
+      Address
+      <input formControlName="AddressLine1">
+      <div *ngIf="submitted && employeeData.controls.message.errors" class="error">
+        <div *ngIf="employeeData.controls.message.errors.required">A state is required</div>
+      </div>
+    </label>
+
+    <label>
+      Worker Type
+      <input formControlName="AddressLine2">
+      <div *ngIf="submitted && employeeData.controls.message.errors" class="error">
+        <div *ngIf="employeeData.controls.message.errors.required">A state is required</div>
+      </div>
+    </label>
+
+
+    <label>
+      Work Phone Number
+      <input formControlName="WorkPhoneNumber">
+      <div *ngIf="submitted && employeeData.controls.message.errors" class="error">
+        <div *ngIf="employeeData.controls.message.errors.required">New price required</div>
+      </div>
+    </label>
+
+    <label>
+      Work Email
+      <input formControlName="AddressLine3">
+      <div *ngIf="submitted && employeeData.controls.message.errors" class="error">
+        <div *ngIf="employeeData.controls.message.errors.required">A state is required</div>
+      </div>
+    </label>
+
+
+
+
+
+
+    <input type="submit" value="Send Renewal" class="cta" *ngIf="loading==false">
+  </form>
+</div>
+
+
+<div *ngIf="loading">
+
+  <div class="center-div">
+
+    <div class="center-div" style="width: 400px;">
+      <h1>
+        Updating data....
+      </h1>
+      <div class="center-div" style="width: 100px;">
+        <img src="assets/4partpreloader.gif" />
+      </div>
+    </div>
+  </div>
+</div>

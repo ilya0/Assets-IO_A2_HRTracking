@@ -1,0 +1,58 @@
+<!-- renewals list is - home page -->
+
+
+<div *ngIf="loading">
+  
+  <div class="center-div">
+
+      <div class="center-div" style="width: 400px;">
+        <h1>
+          Contacting Block Chain....
+        </h1>
+        <div class="center-div" style="width: 100px;">
+            <img  src="assets/4partpreloader.gif" /> 
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- 
+  PersonId
+Firstname
+LastName
+Address
+Workertype
+CitzenshipStatus
+ -->
+
+
+<table *ngIf="loading == false" style="width:100%;" >
+  
+  <th Colspan="7" class="tableheader">
+    
+    <h2> Users List</h2>
+</th>
+    <tr>
+      <th>Person ID</th>
+      <th>First, Last Name</th>
+      <th>Address</th>
+      <th>Worker Type</th>
+      <th>Cit. Status</th>
+      <th>Work Email</th>
+      <th>Profile</th>
+    </tr>
+
+    <tr *ngFor="let employee of employeeList">
+
+      <td>{{ employee.PersonId }}</td> 
+      <td>{{ employee.FirstName }}, {{ employee.LastName }}</td>
+      <td>{{ employee.AddressLine1 }}</td>
+      <td>{{ employee.AddressLine2 }}</td>  
+      <td>{{ employee.CitizenshipStatus }}</td> 
+      <td>{{ employee.AddressLine3 }}</td> 
+      <td> <button routerLink="/submit/{{employee.PersonId}}">View Profile</button></td>
+
+    </tr>
+
+  </table>

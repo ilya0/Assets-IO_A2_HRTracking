@@ -1,0 +1,206 @@
+<!--
+  Generated template for the RetailerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding>
+<div class="cc">
+ <ion-grid class="header nopadding" >
+         <ion-row justify-content-start>
+          <ion-col  col-md col-12 col-md-12 class="nopadding">
+		   <ion-col  col-md-12 col-md-6 class="nopadding">
+               <img src="assets/imgs/nordstorm_logo_text.jpg" class="web_logo"><span class="subtitle">Blockchain Transaction Visualizer</span>
+            </ion-col>
+			 <ion-col  col-md-12 col-md-6 class="nopadding">
+                                       <div class="dropdown" float-end>
+                           <button class="  dropdown-toggle userdrop" type="button" data-toggle="dropdown">Hi {{username}}
+                           <span class="caret"></span></button>
+                           <ul class="dropdown-menu">
+                              <li><a href="#" (click)='logout()'>Logout</a></li>
+                           </ul>
+                        </div>
+            </ion-col>
+		  </ion-col>
+		  <ion-col  col-md col-12 col-md-12 class="nopadding visualizerrow">
+		 
+			 <ion-col   col-md-12  class="nopadding">
+                                      <ion-grid class="nopadding" >
+									  <ion-row>
+									   <ion-col  col-md col-12 col-md-6 class="nopadding">
+									  <b> Document Type:</b> Purchase Order | <b>Document No.:</b> 163424
+									   </ion-col>
+									    <ion-col  col-md col-12 col-md-6 text-right>
+									   <b>Email:</b> nsupport@nordstrom.com <b>Phone:</b> +1 800 000 0000
+									   </ion-col>
+									  </ion-row>
+                 
+      </ion-grid>
+            </ion-col>
+		  </ion-col>
+		  <ion-col col-md col-12 col-md-12 class="nopadding orderrow">
+ <ion-col   col-md-12  class="nopadding">
+ <ion-grid class="nopadding" >
+									  <ion-row>
+									   <ion-col  col-md col-12 col-md-6 class="nopadding">
+									 <ion-grid class="nopadding" >
+									  <ion-row>
+									   <ion-col  col-md col-12 col-md-4 class="nopadding">
+									  Order Number: 
+									   </ion-col>
+									    <ion-col  col-md col-12 col-md-4>
+									  163424
+									   </ion-col>
+									  </ion-row>
+									   <ion-row>
+									   <ion-col  col-md col-12 col-md-4 class="nopadding">
+									 Supplier:
+									   </ion-col>
+									    <ion-col  col-md col-12 col-md-4>
+									 Givenchy
+									   </ion-col>
+									  </ion-row>
+									   <ion-row>
+									   <ion-col  col-md col-12 col-md-4 class="nopadding">
+									  Item:
+									   </ion-col>
+									    <ion-col  col-md col-12 col-md-4>
+									  Givenchy Leather Bags
+									   </ion-col>
+									  </ion-row>
+									   <ion-row>
+									   <ion-col  col-md col-12 col-md-4 class="nopadding">
+									  Order value:
+									   </ion-col>
+									    <ion-col  col-md col-12 col-md-4>
+									 2.2 M
+									   </ion-col>
+									  </ion-row>
+                 
+      </ion-grid>
+									   </ion-col>
+									    <ion-col  col-md col-12 col-md-6>
+									<ion-grid class="nopadding" >
+									  <ion-row>
+									   <ion-col  col-md col-12 col-md-4 class="nopadding">
+									  Status:
+									   </ion-col>
+									    <ion-col  col-md col-12 col-md-8>
+									  Open
+									   </ion-col>
+									  </ion-row>
+									  <ion-row>
+									   <ion-col  col-md col-12 col-md-4 class="nopadding">
+									 Comments:
+									   </ion-col>
+									    <ion-col  col-md col-12 col-md-8>
+									  Antique‑gold logo‑engraved hardware enhances the signature opulence of
+an Italian‑crafted shoulder bag in soft suede, crinkled patent and smooth
+leather.
+									   </ion-col>
+									  </ion-row>
+                 
+      </ion-grid>
+									   </ion-col>
+									  </ion-row>
+                 
+      </ion-grid>
+ </ion-col>
+		  </ion-col>
+		  <ion-col  col-md col-12 col-md-12 class="nopadding">
+		  <ion-col   col-md-12 class="nopadding">
+		  <ion-grid class="nopadding" >
+		  <ion-row>
+		  <ion-col   col-md-8 class="nopadding flexVcenter">
+		  Order Details:
+		   </ion-col>
+		   <ion-col   col-md-4 class="nopadding">
+		   <ion-grid class="nopadding" >
+		  <ion-row>
+		  <ion-col   col-md-8 class="">
+		  <ion-searchbar
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)" class="searchinput">
+</ion-searchbar>
+		   </ion-col>
+		   <ion-col   col-md-2 class="">
+		  <button ion-button full outline class="filter headerbutton">Filters</button>
+		   </ion-col>
+		   <ion-col   col-md-2 class="">
+		  <button ion-button full outline class="edit headerbutton">Edit</button>
+		   </ion-col>
+		   </ion-row>
+		  </ion-grid>
+		   </ion-col>
+		  </ion-row>
+		  </ion-grid>
+			 </ion-col>
+		  </ion-col>
+         </ion-row>
+      </ion-grid>
+	   <ion-grid class="pagination nopadding" >
+         <ion-row justify-content-end>
+		  <ion-col  col-md-12 class="" float-end>{{arrcount}} items</ion-col>
+		 </ion-row>
+		  </ion-grid>
+ <ion-grid class="inventory_table" >
+ <div class="inventory_table_inner">
+                                    <ion-row justify-content-start class="headers">
+                                       <ion-col col-2>
+                                         Sequence No.
+                                       </ion-col>
+                                       <ion-col col-2>
+                                          Date and Time
+                                       </ion-col>
+									   <ion-col col-2>
+                                         Order Type
+                                       </ion-col>
+                                       <ion-col col-2>
+                                          Activity
+                                       </ion-col>
+									   <ion-col col-2>
+                                         Owner
+                                       </ion-col>
+                                       <ion-col col-2>
+                                          Location
+                                       </ion-col>
+									  
+                                    </ion-row>
+
+       <ion-row justify-content-start class="transactionrows">
+                                       <ion-col col-2 >
+                                         1
+                                       </ion-col>
+                                       <ion-col col-2>
+                                          20/09/2018 9:00 AM
+                                       </ion-col>
+									   <ion-col col-2>
+                                         Purchase Order
+                                       </ion-col>
+                                       <ion-col col-2>
+                                          PO created and sent to Supplier
+                                       </ion-col>
+									   <ion-col col-2>
+                                         Nordstrom
+                                       </ion-col>
+                                       <ion-col col-2>
+                                          WA , United States
+                                       </ion-col>
+									  
+                                    </ion-row>
+ <ion-row justify-content-start>
+						    
+                              <ion-col  col-md col-12 col-md-12 *ngIf="arrlength==''">
+                                <p style="text-align:center">No Items Found</p>
+                              </ion-col>
+							  </ion-row>
+
+      </div>
+    </ion-grid>
+
+								    </div>
+</ion-content>

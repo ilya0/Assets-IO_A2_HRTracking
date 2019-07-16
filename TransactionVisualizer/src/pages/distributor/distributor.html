@@ -1,0 +1,170 @@
+<!--
+   Generated template for the DistributorPage page.
+   
+   See http://ionicframework.com/docs/components/#navigation for more info on
+   Ionic pages and navigation.
+   -->
+
+<ion-content padding>
+   <div class="cc">
+    <ion-grid class="header nopadding" >
+         <ion-row justify-content-start>
+          <ion-col  col-md col-12 col-md-12 class="nopadding">
+		   <ion-col  col-md-12 col-md-6 class="nopadding">
+               <span class="customslogo web_logo">WinSupply</span><span class="subtitle">&nbsp;Distributor</span>
+            </ion-col>
+			 <ion-col  col-md-12 col-md-6 class="nopadding">
+                                       <div class="dropdown" float-end>
+                           <button class="  dropdown-toggle userdrop" type="button" data-toggle="dropdown">Hi {{username}}
+                           <span class="caret"></span></button>
+                           <ul class="dropdown-menu">
+                              <li><a href="#" (click)='logout()'>Logout</a></li>
+                           </ul>
+                        </div>
+            </ion-col>
+		  </ion-col>
+	  <ion-col  col-md col-12 col-md-12 class="nopadding">
+		 
+			 <ion-col   col-lg-6 float-end class="nopadding">
+                                      <ion-grid class="nopadding" >
+                  <ion-row justify-content-end>
+				   <ion-col  col-md col-12 col-md-8>
+                        
+						<ion-searchbar
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)" class="searchinput">
+</ion-searchbar>
+                     </ion-col>
+                     <ion-col  col-md-2><button ion-button full outline class="filter headerbutton">Filters</button></ion-col>
+                     <ion-col  col-md-2 ><button ion-button full outline class="edit headerbutton">Edit</button></ion-col>
+				  </ion-row>
+      </ion-grid>
+            </ion-col>
+		  </ion-col>
+         </ion-row>
+      </ion-grid>
+      <ion-grid class="" >
+         
+		 <ion-row justify-content-start class="product_row" *ngFor="let item of productarray">
+            <ion-col  col-md-12>
+               <ion-grid class="nopaddingmobile" >
+                  <ion-row justify-content-start>
+                     <ion-col  col-md col-12 col-md-6 class="lhs_col">
+                       
+                        <ion-grid class="nopaddingmobile" >
+                           <ion-row justify-content-start>
+						    
+                              <ion-col  col-md col-12 col-md-3 style="display:none">
+                                 <div class="pro_img"><img src="assets/imgs/ProductImages/_103402067.jpg" class="img-responsive"></div>
+                              </ion-col>
+                              <ion-col  col-md col-12 col-md-12 >
+                                 <ion-grid class="nopaddingmobile" >
+								  <ion-col col-md col-12 col-md-12><b>Product Details</b></ion-col>
+                                    <ion-row justify-content-start>
+                                       <ion-col col-md col-12 col-md-3>
+                                          Product Name
+                                       </ion-col>
+                                       <ion-col col-md col-12 col-md-7 class="blockC">
+                                        {{item.Record.name}}
+                                       </ion-col>
+                                    </ion-row>
+                                    <ion-row justify-content-start>
+                                       <ion-col col-md col-12 col-md-3>
+                                          Product ID
+                                       </ion-col>
+                                       <ion-col col-7="" class="blockC">
+                                        {{item.Record.productid}}
+                                       </ion-col>
+                                    </ion-row>
+                                    <ion-row justify-content-start>
+                                       <ion-col col-md col-12 col-md-3>
+                                          Manufactured Date:
+                                       </ion-col>
+                                       <ion-col col-7="" class="blockC">
+                                        {{item.Record.mfd}}
+                                       </ion-col>
+                                    </ion-row>
+                                   
+                                    <ion-row justify-content-start>
+                                       <ion-col col-md col-12 col-md-3>
+                                          Brand
+                                       </ion-col>
+                                       <ion-col col-7="" class="blockC">
+                                        {{item.Record.brand}}
+                                       </ion-col>
+                                    </ion-row>
+                                   <ion-row justify-content-start>
+                                       <ion-col col-md col-12 col-md-3>
+                                          Location
+                                       </ion-col>
+                                       <ion-col col-7="" class="blockC">
+                                        {{item.Record.location}}
+                                       </ion-col>
+                                    </ion-row>
+									
+                                 </ion-grid>
+                              </ion-col>
+                              <ion-col  col-md col-12 col-md-3>
+                                 <ion-grid class="" >
+                                   
+                                 </ion-grid>
+                              </ion-col>
+                           </ion-row>
+                        </ion-grid>
+                     </ion-col>
+                     <ion-col class="schedule" col-sm col-12 col-md-6>
+                        <ion-grid class="rhs_col" >
+                           <ion-row justify-content-start>
+                              <ion-col  col-md-12><b>Transporation and Logistics</b></ion-col>
+                              <ion-col col-md col-12 col-md-6>
+                                 Location
+                              </ion-col>
+                              <ion-col col-md col-12 col-md-6 class="blockC">
+                                 {{item.Record.location}}
+                              </ion-col>
+                           </ion-row>
+                           <ion-row justify-content-start>
+                              <ion-col col-md col-12 col-md-6>
+                                 Name of Transport Agency
+                              </ion-col>
+                              <ion-col col-md col-12 col-md-6 class="blockC">
+                                 {{item.Record.nameoftransportagency}}
+                              </ion-col>
+                           </ion-row>
+						    <ion-row justify-content-start>
+                              <ion-col col-md col-12 col-md-6>
+                                 Mode of Transport
+                              </ion-col>
+                              <ion-col col-md col-12 col-md-6 class="blockC">
+                                 {{item.Record.modeoftransport}}
+                              </ion-col>
+                           </ion-row>
+                           <ion-row justify-content-start>
+                              <ion-col col-md col-12 col-md-6>
+                                 Logistics
+                              </ion-col>
+                              <ion-col col-md col-12 col-md-6 class="blockC">
+                                 WA Logistics
+                              </ion-col>
+							  <button ion-button color="dark" class="transfer" (click)="openModal(item.Record)">Transfer</button>
+
+                           </ion-row>
+                        </ion-grid>
+                     </ion-col>
+                  </ion-row>
+               </ion-grid>
+            </ion-col>
+         </ion-row>
+	
+		 <ion-row justify-content-start>
+						    
+                              <ion-col  col-md col-12 col-md-12 *ngIf="arrlength==''">
+                                <br><p style="text-align:center">No Items Found</p>
+                              </ion-col>
+							  </ion-row>
+		 
+      </ion-grid>
+   </div>
+</ion-content>

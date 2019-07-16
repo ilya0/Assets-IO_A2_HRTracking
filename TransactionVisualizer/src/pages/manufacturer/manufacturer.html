@@ -1,0 +1,325 @@
+<!--
+  Generated template for the RetailerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding>
+  <div class="cc">
+    <ion-grid class="header nopadding">
+      <ion-row justify-content-start>
+        <ion-col col-md col-12 col-md-12 class="nopadding">
+          <ion-col col-md-12 col-md-6 class="nopadding">
+            <img src="assets/imgs/givenchy_logo.svg" alt="Logo" class="web_logo"><span class="subtitle">&nbsp;Manufacturer</span>
+          </ion-col>
+          <ion-col col-md-12 col-md-6 class="nopadding">
+            <div class="dropdown" float-end>
+              <button class="  dropdown-toggle userdrop" type="button" data-toggle="dropdown">Hi {{username}}
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+               
+				<li><a href="#" (click)="showNewOrders()" class="neworders">View Orders</a></li>
+				 <li><a href="#" (click)='logout()'>Logout</a></li>
+              </ul>
+            </div>
+			
+          </ion-col>
+		   
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+ <ion-grid class="manufacturer" [ngClass]="create ? 'disabled' : 'enabled'">
+	<ion-col col-md-12 col-md-12 class="nopadding" float-end text-right>
+           
+          </ion-col>
+      <ion-col col-md col-12 col-md-12><h3>Get Order Details</h3></ion-col>
+      <ion-row justify-content-start class="product_row ">
+
+        <ion-col col-md col-12 col-md-12>
+          <ion-grid class="">
+		   <ion-row justify-content-start>
+		  <ion-col col-md col-12 col-md-8>
+		   <ion-row justify-content-start> 
+              <ion-col col-4 col-md-1 >
+               Order Id:
+              </ion-col>
+              <ion-col col-4 col-md-8>
+            <ion-input placeholder="" [(ngModel)]="ponumber"  required></ion-input>
+              </ion-col>
+			  <ion-col col-12 col-md-3 class="nopadding">
+           <button  *ngIf="!isDisabled" ion-button color="dark" (click)="readPurchaseOrderfromERP(ponumber)" >Get Order Details</button>
+              </ion-col>
+            </ion-row>
+		
+			</ion-col>
+			
+			
+ </ion-row>
+          </ion-grid>
+        </ion-col>
+        
+		
+      </ion-row>
+<ion-row justify-content-start class="rows" *ngFor="let item of purchaseorders">
+		<ion-col col-12 justify-content-start class="product_row ">
+
+        <ion-col col-md col-12 col-md-12>
+          <ion-grid class="">
+		   <ion-row justify-content-start>
+		   <ion-col col-md col-12 col-md-12><h3>Order Details</h3></ion-col>
+		  <ion-col col-md col-12 col-md-6>
+		   <ion-row justify-content-start> 
+              <ion-col col-6 col-md-3 >
+                PO Id:
+              </ion-col>
+              <ion-col col-6 col-md-8>
+            {{item.POHeaderId}}
+              </ion-col>
+            </ion-row>
+			
+            <ion-row justify-content-start> 
+              <ion-col col-6 col-md-3>
+                Order Number:
+              </ion-col>
+              <ion-col col-6 col-md-8>
+                {{item.OrderNumber}}
+              </ion-col>
+            </ion-row>
+            <ion-row justify-content-start>
+             <ion-col col-6 col-md-3>
+                Creation Date:
+              </ion-col>
+              <ion-col col-6 col-md-8>
+               {{item.CreationDate}}
+              </ion-col>
+            </ion-row>
+            <ion-row justify-content-start>
+             <ion-col col-6 col-md-3>
+                Buyer:
+              </ion-col>
+               <ion-col col-6 col-md-8>
+                {{item.Buyer}}
+              </ion-col>
+            </ion-row>
+			</ion-col>
+			
+			<ion-col col-md col-12 col-md-6>
+			
+            <ion-row justify-content-start>
+              <ion-col col-6 col-md-3>
+                Total:
+              </ion-col>
+               <ion-col col-6 col-md-8>
+                 {{item.Total}}
+              </ion-col>
+            </ion-row>
+            <ion-row justify-content-start>
+              <ion-col col-6 col-md-3>
+                Supplier:
+              </ion-col>
+               <ion-col col-6 col-md-8>
+                {{item.Supplier}}
+              </ion-col>
+            </ion-row>
+            <ion-row justify-content-start>
+              <ion-col col-6 col-md-3>
+               Ordered:
+              </ion-col>
+               <ion-col col-6 col-md-8>
+                 {{item.Ordered}}
+              </ion-col>
+            </ion-row>
+           
+ </ion-col>
+ </ion-row>
+          </ion-grid>
+        </ion-col>
+        <ion-col col-md-12 float-end>
+		<button   ion-button color="dark" (click)="initPurchaseQuote(item)" float-end>NEXT</button></ion-col>
+      </ion-col>
+<ion-col col-2>
+           
+          </ion-col>
+		  <ion-col col-2>
+          
+          </ion-col>
+		  <ion-col col-2>
+ 
+</ion-col>
+<ion-col col-2>
+ 
+</ion-col>
+<ion-col col-2>
+
+</ion-col>
+
+</ion-row>
+    </ion-grid>
+    <ion-grid class="manufacturer" *ngIf="create">
+	<ion-col col-md-12 col-md-12 class="nopadding" float-end text-right>
+           
+          </ion-col>
+      <ion-col col-md col-12 col-md-12><h3>Create Product</h3></ion-col>
+      <ion-row justify-content-start class="product_row ">
+
+        <ion-col col-md col-12 col-md-12>
+          <ion-grid class="">
+		   <ion-row justify-content-start>
+		  <ion-col col-md col-12 col-md-6>
+		   <ion-row justify-content-start> 
+              <ion-col col-6 col-md-3>
+                PO Id:
+              </ion-col>
+              <ion-col col-6 col-md-8>
+                <ion-input placeholder="" [(ngModel)]="poid" disabled required></ion-input>
+              </ion-col>
+            </ion-row>
+			
+            <ion-row justify-content-start> 
+              <ion-col col-6 col-md-3>
+                Product Name:
+              </ion-col>
+              <ion-col col-6 col-md-8>
+                <ion-input placeholder="" [(ngModel)]="pname" disabled="{{isDisabled}}" required></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row justify-content-start>
+             <ion-col col-6 col-md-3>
+                Product ID:
+              </ion-col>
+              <ion-col col-6 col-md-8>
+                <ion-input placeholder="" [(ngModel)]="pid"  disabled="{{isDisabled}}" required></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row justify-content-start>
+             <ion-col col-6 col-md-3>
+                Product Material:
+              </ion-col>
+               <ion-col col-6 col-md-8>
+                <ion-input placeholder="" [(ngModel)]="pmaterial"  disabled="{{isDisabled}}" required></ion-input>
+              </ion-col>
+            </ion-row>
+			</ion-col>
+			
+			<ion-col col-md col-12 col-md-6>
+			
+            <ion-row justify-content-start>
+              <ion-col col-6 col-md-3>
+                Brand:
+              </ion-col>
+               <ion-col col-6 col-md-8>
+                <ion-input placeholder="" [(ngModel)]="pbrand"  disabled="{{isDisabled}}" required></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row justify-content-start>
+              <ion-col col-6 col-md-3>
+                Color:
+              </ion-col>
+               <ion-col col-6 col-md-8>
+                <ion-input placeholder="" [(ngModel)]="color"  disabled="{{isDisabled}}" required></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row justify-content-start>
+              <ion-col col-6 col-md-3>
+               Manufactured Location:
+              </ion-col>
+               <ion-col col-6 col-md-8>
+                <ion-input placeholder="" [(ngModel)]="plocation"  disabled="{{isDisabled}}" required></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row justify-content-start>
+              <ion-col col-6 col-md-3>
+                Manufactured Date:
+              </ion-col>
+               <ion-col col-6 col-md-8>
+			  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="mdate" disabled="{{isDisabled}}" required></ion-datetime>
+               
+              </ion-col>
+			 
+            </ion-row>
+ </ion-col>
+  <ion-col col-md-12 float-end>
+		<button  *ngIf="!isDisabled" ion-button color="dark" (click)="initProduct()" float-end>Create Product</button></ion-col>
+ </ion-row>
+          </ion-grid>
+        </ion-col>
+       
+      </ion-row>
+
+    </ion-grid>
+    <ion-grid class="inventory_table" >
+      <div class="inventory_table_inner">
+        <ion-row justify-content-start class="headers">
+ <ion-col col-1>
+            Product Id 
+          </ion-col>
+          <ion-col col-3>
+            Product Name
+          </ion-col>
+          <ion-col col-1>
+            Brand
+          </ion-col>
+          
+          <ion-col col-1>
+            Product Material
+          </ion-col>
+         
+          <ion-col col-1 col-lg-1>
+           Color
+          </ion-col>
+
+          <ion-col col-1>
+            Mftd Location
+          </ion-col>
+		  <ion-col col-2>
+            Mftd Date
+          </ion-col>
+          <ion-col col-2 col-lg-2>
+
+          </ion-col>
+        </ion-row>
+
+        <ion-row justify-content-start class="rows" *ngFor="let item of productFromBlkChain">
+		<!-- <ion-row justify-content-start class="rows" *ngFor=""> -->
+<ion-col col-1>
+            {{item.Record.productid}}
+          </ion-col>
+          <ion-col col-3>
+            {{item.Record.name}}
+          </ion-col>
+           <ion-col col-1>
+            {{item.Record.brand}}
+          </ion-col>
+          
+          <ion-col col-1>
+            {{item.Record.pmaterial}}
+          </ion-col>
+         
+          <ion-col col-1 col-lg-1>
+              {{item.Record.colour}}
+          </ion-col> 
+
+          <ion-col col-1>
+           {{item.Record.location}}
+          </ion-col>
+		  <ion-col col-2>
+            {{item.Record.mfd}}
+          </ion-col>
+          <ion-col col-2 col-lg-2>
+          <button ion-button color="dark" (click)="transferProduct(item.Record)" float-end>Transfer Product</button>
+          </ion-col>
+        </ion-row>
+ <ion-row justify-content-start>
+						    
+                              <ion-col  col-md col-12 col-md-12 *ngIf="arrlength==''">
+                                <br><p style="text-align:center">No Items Found</p>
+                              </ion-col>
+							  </ion-row>
+
+      </div>
+    </ion-grid>
+  </div>
+</ion-content>

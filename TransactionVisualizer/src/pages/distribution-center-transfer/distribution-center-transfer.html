@@ -1,0 +1,112 @@
+<!--
+  Generated template for the DistributionCenterTransferPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-buttons end>
+        <a href="#" (click)="closeModal()"><ion-icon name="close-circle" class="close" ></ion-icon></a>
+      </ion-buttons>
+</ion-header>
+
+
+<ion-content padding>
+<ion-grid class="manufacturer" [ngClass]="create ? 'disabled' : 'enabled'">
+      <ion-col col-md col-12 col-md-12>
+        <h3>Transfer to Retail Store</h3>
+      </ion-col>
+      <ion-row justify-content-start class="product_row clickrow" >
+        <ion-col col-md col-12 col-md-12>
+          <ion-grid class="">
+            <ion-row justify-content-start>
+              <ion-col col-md col-12 col-md-12>
+               
+                <ion-row justify-content-start>
+                  <ion-col col-6 col-md-3 > Purchase Order: </ion-col>
+                  <ion-col col-6 col-md-8 class="blockC">
+                    {{poheaderid}}
+                  </ion-col>
+                </ion-row>
+               
+                <ion-row justify-content-start>
+                  <ion-col col-6 col-md-3> Sales Order#: </ion-col>
+                  <ion-col col-6 col-md-8 class="blockC">
+                    {{ordernumber}}
+                  </ion-col>
+                </ion-row>
+                <ion-row justify-content-start>
+                  <ion-col col-6 col-md-3> Product ID: </ion-col>
+                  <ion-col col-6 col-md-8 class="blockC">
+                    {{productid}}
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+              <ion-col col-md col-12 col-md-12>
+                
+                <ion-row justify-content-start *ngIf="quantity!=''">
+                  <ion-col col-6 col-md-3> Quantity: </ion-col>
+                  <ion-col col-6 col-md-8 class="blockC">
+                    {{quantity}}
+                  </ion-col>
+                </ion-row>
+               <ion-row justify-content-start>
+                  <ion-col col-6 col-md-3> Mode of Transport: </ion-col>
+                  <ion-col col-6 col-md-8>
+                    
+					  <ion-item>
+										     <ion-select [(ngModel)]="transportation" [selectOptions]="motOptions" >
+    <ion-option value="LAND SHIPMENT">LAND SHIPMENT</ion-option>
+    <ion-option value="RAILWAY SHIPMENT">RAILWAY SHIPMENT</ion-option>
+	 <ion-option value="SEA SHIPMENT">SEA SHIPMENT</ion-option>
+	 <ion-option value=">AIR-FREIGHT">AIR-FREIGHT</ion-option>
+  </ion-select></ion-item> 
+                  </ion-col>
+                </ion-row>
+				<ion-row justify-content-start>
+                  <ion-col col-6 col-md-3> Name of Transportation Agency: </ion-col>
+                  <ion-col col-6 col-md-8>
+                   
+					  <ion-item>
+										     <ion-select [(ngModel)]="logistics" [selectOptions]="nataOptions" >
+    <ion-option value="Total Quality Logistics">Total Quality Logistics</ion-option>
+    <ion-option value="Cowan Logistics">Cowan Logistics</ion-option>
+	 <ion-option value="Agility Logistics">Agility Logistics</ion-option>
+	 
+  </ion-select></ion-item>   
+                  </ion-col>
+                </ion-row>
+                <ion-row justify-content-start>
+                  <ion-col col-6 col-md-3> Shipping From: </ion-col>
+                  <ion-col col-6 col-md-8>
+                    <ion-input placeholder=""  [(ngModel)]="fromlocation" ></ion-input>
+                  </ion-col>
+                </ion-row>
+                <ion-row justify-content-start>
+                  <ion-col col-6 col-md-3> Shipping To: </ion-col>
+                  <ion-col col-6 col-md-8>
+                    <ion-item>
+                      <ion-select [selectOptions]="selectOptions" [(ngModel)]="location">
+                        <ion-option value="Nordstrom Rack Belmar">Nordstrom Rack Belmar</ion-option>
+                        <ion-option value="Nordstrom Cherry Creek Shopping Center">Nordstrom Cherry Creek Shopping Center</ion-option>
+                        <ion-option value="Nordstrom Rack Cherry Creek">Nordstrom Rack Cherry Creek</ion-option>
+                        <ion-option value="Nordstrom Rack Park Meadows">Nordstrom Rack Park Meadows</ion-option>
+                        <ion-option value="Nordstrom Park Meadows">Nordstrom Park Meadows</ion-option>
+                        <ion-option value="Nordstrom FlatIron Crossing">Nordstrom FlatIron Crossing</ion-option>
+                        <ion-option value="Nordstrom Rack Twenty Ninth Street Shopping Center">Nordstrom Rack Twenty Ninth Street Shopping Center</ion-option>
+                        <ion-option value="Nordstrom FlatIron Crossing">Nordstrom FlatIron Crossing</ion-option>
+                      </ion-select>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+        <ion-col col-md-12 float-end>
+          <button  *ngIf="!isDisabled" ion-button color="dark" (click)="savedetails()" float-end>Transfer</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+</ion-content>

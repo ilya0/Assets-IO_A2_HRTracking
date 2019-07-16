@@ -1,0 +1,228 @@
+<!--
+  Generated template for the RetailerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content padding>
+	<div class="cc">
+		<ion-grid class="header nopadding">
+			<ion-row justify-content-end>
+				<ion-col col-md col-12 col-md-12 class="nopadding">
+						<ion-col col-md-12 col-md-1>
+								<img src="../../assets/imgs/smart_erp.png" alt="Logo" class="logo">
+							   </ion-col>
+					
+					<ion-col col-md-12 col-md-6 class="nopadding">
+						<div class="dropdown" float-end>
+							<button class="  dropdown-toggle userdrop" type="button" data-toggle="dropdown">Hi {{username}}
+								<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#" (click)='logout()'>Logout</a></li>
+							</ul>
+						</div>
+					</ion-col>
+				</ion-col>
+				<ion-col class="nopadding ">
+						
+						<ion-col style="color: black; font-size: 13px" col-md-12 offset-9  >
+								<span class="nopadding">Blockchain Transaction Visualizer</span>
+							</ion-col>
+					<!-- <ion-col   col-md-12  class="nopadding">
+                                      <ion-grid class="nopadding" >
+									  <ion-row>
+									   <ion-col  col-md col-12 col-md-6 class="nopadding">
+									  <b> Document Type:</b> Purchase Order | <b>Document No.:</b> 163424
+									   </ion-col>
+									    <ion-col  col-md col-12 col-md-6 text-right>
+									   <b>Email:</b> nsupport@nordstrom.com <b>Phone:</b> +1 800 000 0000
+									   </ion-col>
+									  </ion-row>
+                 
+      </ion-grid>
+            </ion-col> -->
+				</ion-col>
+				<ion-col col-md col-12 col-md-12 class="nopadding">
+						<ion-col col-md-12 class="nopadding">
+							<ion-grid class="nopadding">
+								<ion-row>
+										<ion-col col-md-8 class="nopadding flexVcenter">
+												
+										</ion-col>
+																			
+									<ion-col col-md-4 class="nopadding">
+										<ion-grid class="nopadding">
+											<ion-row>
+												<!-- <ion-col col-md-5 class="">
+													<ion-item>
+														<ion-label>Type Filter</ion-label>
+														<ion-select [(ngModel)]="idType" [selectOptions]="selectOptions" (ionChange)="onSelectChange()">
+															<ion-option value="Health">Health ID</ion-option>
+															<ion-option value="Prescription">Prescription Number</ion-option>
+														</ion-select>
+													</ion-item>
+													 <button ion-button full outline class="filter headerbutton">Filters</button>
+												</ion-col> -->
+												<ion-col col-sm-2 class="nopadding flexVcenter">
+														Employee ID:
+												</ion-col>
+												<ion-col col-md-6 class="" >
+														<div class="searchbar" float-end>
+															<ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" class="searchinput">
+															</ion-searchbar>
+														</div>
+												</ion-col>
+	
+												<ion-col col-md-4 class="" width-33 >
+													<div class="sbutton">  
+													<button ion-button full outline (click)="getHistoryForProduct()" class="edit headerbutton" >Search</button>
+													</div>
+												</ion-col>
+											</ion-row>
+										</ion-grid>
+									</ion-col>
+								</ion-row>
+							</ion-grid>
+						</ion-col>
+					</ion-col>
+				<ion-col col-md col-12 col-md-12 class="nopadding orderrow" *ngIf="showhealthdata">
+					<ion-col col-md-12 class="nopadding">
+						<ion-grid class="nopadding">
+							<ion-row>
+								<ion-col col-md col-12 col-md-6 class="nopadding">
+									<ion-grid class="nopadding">
+										<ion-row>
+											<ion-col style="font-weight: bold;"  col-md col-12 col-md-4 >
+													First Name	:
+											</ion-col>
+											<ion-col col-md col-12 col-md-4 >
+												{{healthdata.firstName}}
+											</ion-col>
+										</ion-row>
+										<ion-row>
+											<ion-col style="font-weight: bold;"  col-md col-12 col-md-4 >
+												Last Name :
+											</ion-col>
+											<ion-col col-md col-12 col-md-4 >
+													{{healthdata.lastName}}
+											</ion-col>
+										</ion-row>
+										<ion-row>
+											<ion-col style="font-weight: bold;"  col-md col-12 col-md-4 >
+												User Name				:
+											</ion-col>
+											<ion-col col-md col-12 col-md-4 >
+													{{healthdata.userName}}
+											</ion-col>
+										</ion-row>
+										<ion-row>
+											<ion-col style="font-weight: bold;"  col-md col-12 col-md-4 >
+													Gender		:
+											</ion-col>
+											<!-- <ion-col style="font-weight: bold;" col-md-1>
+												:
+											</ion-col> -->
+											<ion-col col-md col-12 col-md-4 >
+													{{healthdata.gender}}
+											</ion-col>
+										</ion-row>
+
+									</ion-grid>
+								</ion-col>
+								<!-- <ion-col col-md col-12 col-md-6>
+									<ion-grid class="nopadding">
+										<ion-row>
+											<ion-col col-md col-12 col-md-4 class="nopadding">
+												Status:
+											</ion-col>
+											<ion-col col-md col-12 col-md-8>
+												Open
+											</ion-col>
+										</ion-row>
+										<ion-row>
+											<ion-col col-md col-12 col-md-4 class="nopadding">
+												Comments:
+											</ion-col>
+											<ion-col col-md col-12 col-md-8>
+												Antique‑gold logo‑engraved hardware enhances the signature opulence of
+												an Italian‑crafted shoulder bag in soft suede, crinkled patent and smooth
+												leather.
+											</ion-col>
+										</ion-row>
+
+									</ion-grid>
+								</ion-col> -->
+							</ion-row>
+
+						</ion-grid>
+					</ion-col>
+				</ion-col>
+				
+			</ion-row>
+		</ion-grid>
+		<!-- <ion-grid class="pagination nopadding">
+			<ion-row justify-content-end>
+				<ion-col col-md-12 class="" float-end>{{arrcount}} items</ion-col>
+			</ion-row>
+		</ion-grid> -->
+		<ion-grid class="nopadding orderrow" *ngIf="showhealthdata">
+			<div class="inventory_table_inner" *ngIf="prescriptionData">
+				<ion-row style="font-weight: bold;" justify-content-start class="header">
+					<ion-col col-1>
+							Serial No.
+					</ion-col>
+					<ion-col col-5>
+							Transaction ID
+						</ion-col>
+					<ion-col col-1>
+							LastName
+					</ion-col>
+					<ion-col col-3>
+							Work Email
+					</ion-col>
+					<ion-col col-2>
+						Address
+					</ion-col>
+
+				</ion-row>
+
+				<ion-row justify-content-start  class="transactionrows" *ngFor="let item of prescriptionData;let i = index" (click)="openModal(item.pnumber)">
+					<!-- <ion-col>
+							{{prescriptionData[prescriptionData.length-i-1]}}
+					</ion-col> -->
+					<ion-col col-1>
+					{{i+1}}
+					</ion-col>
+					<ion-col col-5 >
+						{{item.txId}}	
+					</ion-col>
+					
+					<ion-col col-1>
+						{{item.lastName}}
+					</ion-col>
+					<ion-col col-3>
+						{{item.workEmail}}
+					</ion-col>
+					<ion-col col-2>
+						{{item.address}}
+					</ion-col>
+					<!-- <ion-col col-2>
+						Nordstrom
+					</ion-col>
+					<ion-col col-2>
+						WA , United States
+					</ion-col> -->
+				</ion-row>
+				<ion-row justify-content-start>
+
+					<ion-col col-md col-12 col-md-12 *ngIf="arrlength==''">
+						<p style="text-align:center">No Items Found</p>
+					</ion-col>
+				</ion-row>
+
+			</div>
+		</ion-grid>
+
+	</div>
+</ion-content>

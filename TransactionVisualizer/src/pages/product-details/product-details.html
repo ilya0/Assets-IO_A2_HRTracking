@@ -1,0 +1,112 @@
+<!--
+  Generated template for the ProductDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button class="backbutton">
+      <ion-icon name="arrow-back"></ion-icon> Back
+    </button>
+    <ion-title>Product Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+ <ion-row>
+<ion-col col-12="" class="slider">
+  <ion-slides autoplay="false" loop="true" speed="3000" pager>
+    <ion-slide *ngFor="let slide of imageslides">
+      <img src="{{slide.image}}" />
+    </ion-slide>
+  </ion-slides>
+  </ion-col>
+</ion-row>
+
+<ion-grid class="productdetails" >
+  <ion-row justify-content-start>
+    <ion-col col-6>
+     Product Name
+    </ion-col>
+    <ion-col col-6>
+     Medium GV3 Leather & Suede Handbag
+    </ion-col>
+  </ion-row>
+<ion-row justify-content-start>
+   <ion-col col-6="">
+      Product ID
+    </ion-col>
+    <ion-col col-6="">
+     1123
+    </ion-col>
+  </ion-row>
+
+<ion-row justify-content-start>
+     <ion-col col-6="">
+      Mfd
+    </ion-col>
+    <ion-col col-6="">
+     GIVENCHY
+    </ion-col>
+  </ion-row>
+  <ion-row justify-content-start>
+   <ion-col col-6="">
+      Owner
+    </ion-col>
+    <ion-col col-6="">
+     GIVENCHY Leather
+    </ion-col>
+  </ion-row>
+  
+  
+    <ion-row justify-content-start>
+     <ion-col col-6="">
+      Date
+    </ion-col>
+    <ion-col col-6="">
+     10-9-10
+    </ion-col>
+  </ion-row>
+  
+    
+    <ion-row justify-content-start>
+     <ion-col col-6="">
+      Time
+    </ion-col>
+    <ion-col col-6="">
+    11:45
+    </ion-col>
+  </ion-row>
+      <ion-row justify-content-start class="location">
+     <ion-col col-6="">
+      Location 1
+    </ion-col>
+    <ion-col col-6="">
+    11:45
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar >
+    <ion-buttons start class="report">
+      <button ion-button>
+        REPORT
+      </button>
+    </ion-buttons>
+
+   
+
+    <ion-buttons start>
+      <button ion-button>
+        HISTORY
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,132 @@
+<!--
+  Generated template for the RetailerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding>
+<div class="cc">
+ <ion-grid class="header nopadding" >
+         <ion-row justify-content-start>
+          <ion-col  col-md col-12 col-md-12 class="nopadding">
+		   <ion-col  col-md-12 col-md-6 class="nopadding">
+               <span class="customslogo web_logo">Nationalwide</span><span class="subtitle">&nbsp;Customs Clearance</span>
+            </ion-col>
+			 <ion-col  col-md-12 col-md-6 class="nopadding">
+                                       <div class="dropdown" float-end>
+                           <button class="  dropdown-toggle userdrop" type="button" data-toggle="dropdown">Hi {{username}}
+                           <span class="caret"></span></button>
+                           <ul class="dropdown-menu">
+                              <li><a href="#" (click)='logout()'>Logout</a></li>
+                           </ul>
+                        </div>
+            </ion-col>
+		  </ion-col>
+		  <ion-col  col-md col-12 col-md-12 class="nopadding">
+		 
+			 <ion-col   col-lg-6 float-end class="nopadding">
+                                      <ion-grid class="nopadding" >
+                  <ion-row justify-content-end>
+				   <ion-col  col-md col-12 col-md-8>
+                        
+						<ion-searchbar
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)" class="searchinput">
+</ion-searchbar>
+                     </ion-col>
+                     <ion-col  col-md-2><button ion-button full outline class="filter headerbutton">Filters</button></ion-col>
+                     <ion-col  col-md-2 ><button ion-button full outline class="edit headerbutton">Edit</button></ion-col>
+				  </ion-row>
+      </ion-grid>
+            </ion-col>
+		  </ion-col>
+         </ion-row>
+      </ion-grid>
+	   <ion-grid class="pagination nopadding" >
+         <ion-row justify-content-end>
+		  <ion-col  col-md-12 class="" float-end>{{arrcount}} items</ion-col>
+		 </ion-row>
+		  </ion-grid>
+ <ion-grid class="inventory_table" >
+ <div class="inventory_table_inner">
+                                    <ion-row justify-content-start class="headers">
+                                       <ion-col col-1>
+                                         Case Number
+                                       </ion-col>
+                                       <ion-col col-3>
+                                          Product Name
+                                       </ion-col>
+									   <ion-col col-1>
+                                         Product Id
+                                       </ion-col>
+                                      
+									   <ion-col col-1>
+                                         Color
+                                       </ion-col>
+ <ion-col col-1>
+           Brand
+          </ion-col>
+		  <ion-col col-1>
+            Material
+          </ion-col><ion-col col-1>
+            Location
+          </ion-col><ion-col col-2>
+            Transport Agency
+          </ion-col>
+                                       <ion-col col-1>
+                                         Status
+                                       </ion-col>
+									   
+                                    </ion-row>
+
+        <ion-row justify-content-start class="custom rows" *ngFor="let item of productarray" (click)="openModal(item.Record)">
+		<ion-col col-1>
+                                        {{item.Record.case}}
+                                       </ion-col>
+          <ion-col col-3 class="blockC">
+            {{item.Record.name}}
+          </ion-col>
+          <ion-col col-1 class="blockC">
+            {{item.Record.productid}}
+          </ion-col>
+		   <ion-col col-1 class="blockC">
+            {{item.Record.colour}}
+          </ion-col>
+          <ion-col col-1 class="blockC">
+            {{item.Record.brand}}
+          </ion-col>
+          <ion-col col-1 class="blockC">
+            {{item.Record.pmaterial}}
+          </ion-col>
+		  <ion-col col-1 class="blockC">
+            {{item.Record.location}} 
+          </ion-col>
+		  <ion-col col-2 class="blockC">
+           {{item.Record.nameoftransportagency}} 
+          </ion-col>
+          <ion-col col-1>
+           Pending
+          </ion-col>
+
+          <div class="morebutton">
+            <ion-icon name="ios-arrow-forward-outline"></ion-icon>
+          </div>
+        </ion-row>
+		
+		 <ion-row justify-content-start>
+						    
+                              <ion-col  col-md col-12 col-md-12 *ngIf="arrlength==''">
+                                <p style="text-align:center">No Items Found</p>
+                              </ion-col>
+							  </ion-row>
+
+
+      </div>
+    </ion-grid>
+
+								    </div>
+</ion-content>

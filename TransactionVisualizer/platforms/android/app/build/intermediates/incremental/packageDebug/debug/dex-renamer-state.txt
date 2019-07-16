@@ -1,0 +1,4 @@
+#Wed Oct 31 18:55:45 IST 2018
+base.0=D\:\\AppDev\\nordstorm-web22-10\\nordstorm-web\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=D\:\\AppDev\\nordstorm-web22-10\\nordstorm-web\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

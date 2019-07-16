@@ -1,0 +1,200 @@
+<!-- <h1>Employee Page </h1> -->
+
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()" *ngIf="loading==false">
+
+  <h5 *ngIf="success">Your form is valid!</h5>
+  <table>
+    <tr>
+      <th Colspan="6" class="tableheader">
+        <h2>
+          Block Chain information -
+          {{this.empldata.items[0].FirstName}}
+          {{this.empldata.items[0].LastName}} </h2>
+
+  <input type="button" value="Edit Employee Data" routerLink="/actionlist/{{this.empldata.items[0].PersonId}}" class="cta"
+  *ngIf="loading==false">
+      </th>
+    </tr>
+
+    <tr>
+      <td>Person ID</td>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Address</td>
+      <td>Worker Type</td>
+      <td>Work Email</td>
+    </tr>
+
+
+    <tr>
+      <th>{{this.empldata.items[0].PersonId}}</th>
+      <th>{{this.empldata.items[0].FirstName}}</th>
+      <th>{{this.empldata.items[0].LastName}}</th>
+      <th>{{this.empldata.items[0].AddressLine1}}</th>
+      <th>{{this.empldata.items[0].AddressLine2}}</th>
+      <th>{{this.empldata.items[0].AddressLine3}}</th>
+    </tr>
+
+    <tr>
+      <td>Date Of Birth</td>
+      <td>Hire Date</td>
+      <td>SSN</td>
+      <td>City</td>
+      <td>CitizenshipStatus</td>
+      <td>Country</td>
+    </tr>
+
+
+    <tr>
+      <th>{{this.empldata.items[0].DateOfBirth}}</th>
+      <th>{{this.empldata.items[0].HireDate}}</th>
+      <th>{{this.empldata.items[0].NationalId}}</th>
+      <th>{{this.empldata.items[0].City}}</th>
+      <th>{{this.empldata.items[0].CitizenshipStatus}}</th>
+      <th>{{this.empldata.items[0].Country}}</th>
+    </tr>
+
+    <tr>
+      <th Colspan="6" class="tableheader">
+        <h4>
+          Application milestone status
+        </h4>
+      </th>
+    </tr>
+
+
+    <tr>
+      <td>PreSubmit Status</td>
+      <td>Submitted to HR</td>
+      <td>New Hire Forms <h5>(First Name + Last Name Present)</h5>
+      </td>
+      <!-- addressline1 -->
+      <td>Payroll and taxes <h5>(Address needed)</h5>
+      </td>
+      <!-- addressline2 -->
+      <td>Policies Paperwork <h5>(Worker Type)</h5>
+      </td>
+      <!-- addressline3 -->
+      <td>Benefits <h5>(Work Email Recieved)</h5>
+      </td>
+
+    </tr>
+
+
+
+
+    <tr>
+
+      <th>
+        PreSubmit: {{this.empldata.items[0].HomePhoneNumber}}
+        {{this.empldata.items[0].HomePhoneNumber == "" || this.empldata.items[0].HomePhoneNumber == null ? "Complete" :
+        "Not Complete ( Home Phone number not present ) "}}
+      </th>
+
+      <th>
+        Submitted to HR: {{this.empldata.items[0].WorkPhoneNumber == "" || this.empldata.items[0].WorkPhoneNumber ==
+        null ? "Completed" : "Not Completed"}}
+      </th>
+      <!-- New hire forms -->
+      <th [ngClass]="{ 
+          'neg': this.empldata.items[0].FirstName == '',
+          'neg': this.empldata.items[0].FirstName == null, 
+          'accept' : this.empldata.items[0].FirstName != '',
+          'accept' : this.empldata.items[0].FirstName != null }">
+        {{this.empldata.items[0].FirstName == "" || this.empldata.items[0].FirstName == null ? "Not Complete (First
+        Name and Last not present)" : "Complete"}}
+
+      </th>
+      <!-- Payroll and taxes -->
+      <th [ngClass]="{ 
+          'neg': this.empldata.items[0].AddressLine1 == '',
+          'neg': this.empldata.items[0].AddressLine1 == null, 
+          'accept' : this.empldata.items[0].AddressLine1 != '',
+          'accept' : this.empldata.items[0].AddressLine1 != null }">
+        {{this.empldata.items[0].AddressLine1 == "" || this.empldata.items[0].AddressLine1 == null ? "Not Complete
+        (Address needed)" : "Complete"}}
+
+      </th>
+      <!-- worker type - using addressline2 as work around -->
+      <th [ngClass]="{ 
+            'neg': this.empldata.items[0].AddressLine2 == '',
+            'neg': this.empldata.items[0].AddressLine2 == null, 
+            'accept' : this.empldata.items[0].AddressLine2 != '',
+            'accept' : this.empldata.items[0].AddressLine2 != null }">
+        {{this.empldata.items[0].AddressLine2 == "" || this.empldata.items[0].AddressLine2 == null ? "Not
+        Complete ( Worker type not assigned )" : "Complete"}}
+      </th>
+      <!-- Work Email status using addressline3 as work around-->
+      <th [ngClass]="{ 
+        'neg': this.empldata.items[0].AddressLine3 == '',
+        'neg': this.empldata.items[0].AddressLine3 == null, 
+        'accept' : this.empldata.items[0].AddressLine3 != '',
+        'accept' : this.empldata.items[0].AddressLine3 != null }">
+        {{this.empldata.items[0].AddressLine3 == "" || this.empldata.items[0].AddressLine3 == null ||
+        this.empldata.items[0].AddressLine3 == " " ? "Not
+        Complete ( WorkEmail not present)" : "Complete"}}
+      </th>
+
+    </tr>
+
+
+  </table>
+
+
+
+
+
+  <div *ngIf="loading">
+
+    <div class="center-div">
+
+      <div class="center-div" style="width: 400px;">
+        <h1>
+          Contacting Block Chain....
+        </h1>
+        <div class="center-div" style="width: 100px;">
+          <img src="assets/4partpreloader.gif" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- shows if loading is false -->
+  <!-- <input type="submit" value="Send Renewal" class="cta" *ngIf="loading==false" > -->
+
+
+  <!-- preloader if loading is true -->
+  <div *ngIf="loading">
+    <img style="height: 35px" src="assets/4partpreloader.gif" />
+    <p style="display:inline; font-size: 50px; padding-left:20px; ">Submitting </p>
+    <img style="height: 35px" src="assets/4partpreloader.gif" />
+  </div>
+
+  <div *ngIf="errormessage">
+    ERRRRRRRRRRRRORRRRRRRRRR
+
+
+    <div>
+      Error code - {{ errormessagecode }}
+    </div>
+
+    <div>
+      {{ errormessage }}
+    </div>
+
+
+  </div>
+
+</form>
+
+
+
+
+<div *ngIf="submitted" class="results">
+  <strong>Name:</strong>
+  <span>{{ messageForm.controls.name.value }}</span>
+
+  <strong>Message:</strong>
+  <span>{{ messageForm.controls.message.value }}</span>
+</div>

@@ -1,0 +1,386 @@
+<!--
+  Generated template for the RetailerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding>
+<div class="cc">
+ <ion-grid class="header nopadding" >
+         <ion-row justify-content-start>
+          <ion-col  col-md col-12 col-md-12 class="nopadding">
+		   <ion-col  col-md-12 col-md-6 class="nopadding">
+              <span class="customslogo web_logo">Nationalwide</span><span class="subtitle">&nbsp;Customs Clearance</span>
+            </ion-col>
+			 <ion-col  col-md-12 col-md-6 class="nopadding">
+                                       <div class="dropdown" float-end>
+                           <button class="  dropdown-toggle userdrop" type="button" data-toggle="dropdown">Hi {{username}}
+                           <span class="caret"></span></button>
+                           <ul class="dropdown-menu">
+                              <li><a href="#" (click)='logout()'>Logout</a></li>
+                           </ul>
+                        </div>
+            </ion-col>
+		  </ion-col>
+		 
+         </ion-row>
+      </ion-grid>
+	   
+<ion-grid class="" >
+         <ion-row justify-content-start class="product_row">
+            <ion-col  col-md-12>
+               <ion-grid class="nopaddingmobile" >
+                  <ion-row justify-content-start>
+                     <ion-col  col-lg col-12 col-lg-7 class="lhs_col">
+                        <ion-grid class="nopaddingmobile" >
+                           <ion-row justify-content-start>
+                             
+                              <ion-col  col-md col-12 col-md-12>
+                                 <ion-grid class="nopaddingmobile" >
+                                    <ion-row justify-content-start>
+									 
+                                       <ion-col col-12 col-lg-4>
+                                          Case Number:
+                                       </ion-col>
+                                       <ion-col col-12 col-lg-8>
+                                         <ion-input placeholder="" [(ngModel)]="casenum"></ion-input>
+                                       </ion-col>
+                                    </ion-row>
+                                    <ion-row justify-content-start>
+                                       <ion-col col-12 col-lg-4>
+                                          Importer Number:
+                                       </ion-col>
+                                       <ion-col col-12 col-lg-8>
+                                           <ion-input placeholder="" value="234534654"></ion-input>
+                                       </ion-col>
+                                    </ion-row>
+                                    <ion-row justify-content-start>
+                                       <ion-col col-12 col-lg-4>
+                                          Parent Document Number:
+                                       </ion-col>
+                                       <ion-col col-12 col-lg-8>
+                                          <ion-input placeholder="" value="123215"></ion-input>
+                                       </ion-col>
+                                    </ion-row>
+                                    <ion-row justify-content-start>
+                                       <ion-col col-12 col-lg-4>
+                                         Port of Entry:
+                                       </ion-col>
+                                       <ion-col col-12 col-lg-8>
+                                           <ion-input placeholder="" value="Port Huron"></ion-input>
+                                       </ion-col>
+                                    </ion-row>
+                                   <ion-row justify-content-start>
+                                       <ion-col col-12 col-lg-4>
+                                         Customer Release forms:
+                                       </ion-col>
+                                       <ion-col col-12 col-lg-8>
+                                          <div class="downloadlink"> <a href="#">Download</a></div>
+                                       </ion-col>
+                                    </ion-row>
+                                 </ion-grid>
+                              </ion-col>
+                             
+                           </ion-row>
+                        </ion-grid>
+                     </ion-col>
+                     <ion-col class="schedule" col-sm col-12 col-lg-5>
+                        <ion-grid class="rhs_col" >
+                           <ion-row justify-content-start>
+                               
+                        <ion-grid class="nopaddingmobile" >
+                           <ion-row justify-content-start>
+                             
+                              <ion-col  col-md col-12 col-md-12>
+                                 <ion-grid class="nopaddingmobile" >
+                                    <ion-row justify-content-start>
+									 <ion-col  col-12 col-md-12><b>Product Info</b></ion-col>
+                                       <ion-col col-12 col-lg-4>
+                                          Product Name
+                                       </ion-col>
+                                       <ion-col  col-12 col-lg-8 class="blockC">
+                                {{pname}}
+                                       </ion-col>
+                                    </ion-row>
+                                    <ion-row justify-content-start>
+                                       <ion-col col-12 col-lg-4>
+                                          Product ID
+                                       </ion-col>
+                                       <ion-col col-12 col-lg-8 class="blockC">
+                              {{pid}}
+                                       </ion-col>
+                                    </ion-row>
+									 <ion-row justify-content-start >
+                              <ion-col col-12 col-lg-4>
+                                PO Header ID
+                              </ion-col>
+                              <ion-col col-12 col-lg-8 class="blockC">
+                                {{poheaderid}}
+                              </ion-col>
+                            </ion-row>
+                                    <ion-row justify-content-start >
+                                       <ion-col col-12 col-lg-4>
+                                          Mftd Date
+                                       </ion-col>
+                                       <ion-col col-12 col-lg-8 class="blockC">
+                              {{mdate}}
+                                       </ion-col>
+                                    </ion-row>
+                                    <ion-row justify-content-start>
+                                       <ion-col col-12 col-lg-4>
+                                Brand
+                                       </ion-col>
+                                       <ion-col col-12 col-lg-8 class="blockC">
+                               {{pbrand}}
+                                       </ion-col>
+                                    </ion-row>
+                                    <ion-row justify-content-start >
+                                       <ion-col col-12 col-lg-4>
+                                          Location
+                                       </ion-col>
+                                       <ion-col col-12 col-lg-8 class="blockC">
+                                          {{location}}
+                                       </ion-col>
+                                    </ion-row>
+                            <ion-row justify-content-start >
+                              <ion-col col-12 col-lg-4>
+                                Mode of Transfer:
+                              </ion-col>
+                              <ion-col col-12 col-lg-8 class="blockC">
+                                {{mot}}
+                              </ion-col>
+                            </ion-row>
+                            <ion-row justify-content-start >
+                              <ion-col col-12 col-lg-4>
+                                Name of Transport Agency:
+                              </ion-col>
+                              <ion-col col-12 col-lg-8 class="blockC">
+                                {{nata}}
+                              </ion-col>
+                            </ion-row>
+							
+                                 </ion-grid>
+                              </ion-col>
+                             
+                           </ion-row>
+                        </ion-grid>
+                             
+
+                           </ion-row>
+                        </ion-grid>
+                     </ion-col>
+                  </ion-row>
+               </ion-grid>
+            </ion-col>
+         </ion-row>
+		
+		 <ion-row justify-content-start class="product_row">
+            <ion-col  col-md-12>
+               <ion-grid class="" >
+                  <ion-row justify-content-start>
+                     <ion-col  col-lg col-12 col-lg-7 class="lhs_col">
+                        <ion-grid  class="res_table" >
+                           <ion-row justify-content-start>
+                             
+                              <ion-col  col-md col-12 col-md-12>
+                                 <ion-grid class="" >
+								   <ion-row justify-content-start class="customsheadings">
+                                  <ion-col  col-md col-2 col-md-2>
+								  ID
+								   </ion-col>
+								   <ion-col  col-md col-4 col-md-4>
+								  Description
+								   </ion-col>
+								   <ion-col  col-md col-2 col-md-2>
+								  Qty
+								   </ion-col>
+								    <ion-col  col-md col-2 col-md-2>
+								  Unit Price
+								   </ion-col>
+								   <ion-col  col-md col-2 col-md-2>
+								 Total
+								   </ion-col>
+								   </ion-row>
+								   <ion-row justify-content-start>
+                                  <ion-col  col-md col-2 col-md-2>
+								  1123
+								   </ion-col>
+								   <ion-col  col-md col-4 col-md-4>
+								  GV3 Shoulder Bag GIVENCHY
+								   </ion-col>
+								   <ion-col  col-md col-2 col-md-2>
+								    <span *ngIf="quantity==''">300</span>
+									 <span *ngIf="quantity!=''">{{quantity}}</span>
+								   </ion-col>
+								    <ion-col  col-md col-2 col-md-2>
+								  $2000
+								   </ion-col>
+								   <ion-col  col-md col-2 col-md-2 >
+								 $60,000.00
+								   </ion-col>
+								   </ion-row>
+                                 </ion-grid>
+                              </ion-col>
+                             
+                           </ion-row>
+						   <ion-row justify-content-start>
+                             
+                              <ion-col  col-md col-12 col-md-12>
+                                 <ion-grid class="" >
+								   <ion-row justify-content-start class="customsheadings">
+                                  <ion-col  col-md col-4 col-md-4 text-center>
+								  Type of Duty
+								   </ion-col>
+								   <ion-col  col-md col-4 col-md-4 text-center>
+								  Rate of Duty
+								   </ion-col>
+								   <ion-col  col-md col-4 col-md-3 text-right>
+								  Duty Amount
+								   </ion-col>
+								   
+								   </ion-row>
+								   <ion-row justify-content-start>
+                                  <ion-col  col-md col-4 col-md-4 text-center>
+								 Countervailing Duty (CVD)
+								   </ion-col>
+								   <ion-col  col-md col-4 col-md-4 text-center>
+								  10%
+								   </ion-col>
+								   <ion-col  col-md col-3 col-md-3 text-right>
+								  $ 66,000.00
+								   </ion-col>
+								   
+								   </ion-row>
+								   <ion-row justify-content-start>
+                                  <ion-col  col-md col-4 col-md-4 text-center>
+								 Countervailing Duty (CVD)
+								   </ion-col>
+								   <ion-col  col-md col-4 col-md-4 text-center>
+								  10%
+								   </ion-col>
+								   <ion-col  col-md col-3 col-md-3 text-right>
+								  $ 66,000.00
+								   </ion-col>
+								   
+								   </ion-row>
+								   <ion-row justify-content-start>
+                                  <ion-col  col-md col-4 col-md-4 text-center>
+								 Countervailing Duty (CVD)
+								   </ion-col>
+								   <ion-col  col-md col-4 col-md-4 text-center>
+								  10%
+								   </ion-col>
+								   <ion-col  col-md col-3 col-md-3 text-right>
+								  $ 66,000.00
+								   </ion-col>
+								   
+								   </ion-row>
+								   <ion-row justify-content-start>
+                                  <ion-col  col-md col-4 col-md-4 text-center>
+								 Countervailing Duty (CVD)
+								   </ion-col>
+								   <ion-col  col-md col-4 col-md-4 text-center>
+								  10%
+								   </ion-col>
+								   <ion-col  col-md col-3 col-md-3 text-right>
+								  $ 66,000.00
+								   </ion-col>
+								   
+								   </ion-row>
+                                 </ion-grid>
+                              </ion-col>
+                             
+                           </ion-row>
+						   <ion-row justify-content-end>
+                             
+                              <ion-col  col-md col-12 col-md-12>
+                                 <ion-grid class="" >
+								   <ion-row justify-content-end>
+                                  <ion-col  col-md col-2 col-md-2 text-center>
+								 Grand Total
+								   </ion-col>
+								   <ion-col  col-md col-2 col-md-2 text-left>
+								  $ 75,600.00
+								   </ion-col>
+								   
+								   </ion-row>
+								
+                                 </ion-grid>
+                              </ion-col>
+                             
+                           </ion-row>
+                        </ion-grid>
+                     </ion-col>
+                     <ion-col class="schedule" col-sm col-12 col-lg-5>
+                        <ion-grid class="rhs_col" >
+                           <ion-row justify-content-start>
+                               
+                        <ion-grid class="" >
+                           <ion-row justify-content-start>
+                             
+                              <ion-col  col-md col-12 col-md-12>
+                                 <ion-grid class="" >
+                                    <ion-row justify-content-start>
+									 <ion-col  col-md-12><b>Inspection Result</b></ion-col>
+									 <ion-col  col-md-12>
+                                      <ion-list radio-group [(ngModel)]="autoManufacturers">
+
+
+
+  <ion-item> 
+  <ion-radio value="Approved"></ion-radio>
+    <ion-label>Approved</ion-label>
+   
+  </ion-item>
+  <ion-item> 
+  <ion-radio value="Denied"></ion-radio>
+    <ion-label>Denied</ion-label>
+   
+  </ion-item>
+    <ion-item> 
+  <ion-radio value="Hold"></ion-radio>
+    <ion-label>On Hold for more information</ion-label>
+   
+  </ion-item>
+</ion-list></ion-col>
+                                    </ion-row>
+                                   
+                                 </ion-grid>
+                              </ion-col>
+                             
+                           </ion-row>
+                        </ion-grid>
+                             
+
+                           </ion-row>
+                        </ion-grid>
+                     </ion-col>
+                  </ion-row>
+               </ion-grid>
+            </ion-col>
+         </ion-row>
+		  <ion-row justify-content-end>
+           
+			<ion-col col-md col-4 col-md-2 col-xl-1 justify-content-end>
+              
+			    <button ion-button color="dark" (click)="cancel()" float-end>Cancel</button>
+			     
+            </ion-col>
+			 <ion-col  col-md col-4 col-md-2 col-xl-1 text-center>
+              
+			    <button ion-button color="dark" (click)="savedetails()" >Submit</button>
+			     
+            </ion-col>
+			 <ion-col  col-md col-4 col-md-2 col-xl-1 *ngIf="approved">
+              
+			    <button ion-button color="dark" (click)="transfer()" float-start *ngIf="approved">Transfer</button>
+			     
+            </ion-col>
+         </ion-row>
+		
+      </ion-grid>
+
+								    </div>
+</ion-content>

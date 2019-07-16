@@ -1,0 +1,178 @@
+{
+   "products":[
+      {
+         "Name":"Medium GV3 Leather & Suede Handbag",
+         "Price":2550,
+         "ProductId":"4902453",
+         "color":"Aubergine/ Blue",
+         "barcodeNo" : 20180901,
+         "description":"<p>Part of artistic director Clare Waight Keller's debut handbag line for Givenchy, the GV3 is a chic study in contrasts with its luxe, polished style that belies its practical design. A mix of supple suede and grained leather creates a sophisticated color-blocked effect on this versatile beauty boasting a spacious accordioned interior that provides effortless organization for the essentials, while dual chain and crossbody straps offer multiple styling options.</p>",
+         "images":[
+            "../../assets/imgs/ProductImages/_103401668.jpg",
+            "../../assets/imgs/ProductImages/_103401989.jpg",
+            "../../assets/imgs/ProductImages/_103402004.jpg",
+            "../../assets/imgs/ProductImages/_103402067.jpg"
+
+         ],
+         "Brand":"Givenchy",
+		 "Qty":"300",
+		 "Material":"Givenchy Leather"
+      },
+	  {
+         "Name":"Gem Quilted Leather Frame Shoulder Bag",
+         "Price":2290,
+         "ProductId":"5019492",
+         "color":"Black",
+         "barcodeNo" : 20180902,
+         "description":"<p>Impeccable diamond quilting and gleaming hardware elevate an elegant Italian-crafted frame bag in supple goatskin leather and styled with a sinuous chain strap.</p>",
+         "images":[
+            "../../assets/imgs/ProductImages/_104022743.jpg",
+            "../../assets/imgs/ProductImages/_104022216.jpg",
+            "../../assets/imgs/ProductImages/_104022697.jpg"
+
+         ],
+         "Brand":"Givenchy",
+		 "Qty":"300",
+		 "Material":"Givenchy Leather"
+      },
+	  {
+         "Name":"Medium Pandora Creased Patent Leather Shoulder Bag",
+         "Price":2290,
+         "ProductId":"4902490",
+         "color":"Deep Blue",
+         "barcodeNo" : 20180903,
+         "description":"<p>Softly shining palladium hardware glints against the glossy, crackle-textured leather that shapes this iconic geometric satchel.</p>",
+         "images":[
+            "../../assets/imgs/ProductImages/_103534218.jpg",
+            "../../assets/imgs/ProductImages/_103534000.jpg",
+            "../../assets/imgs/ProductImages/_103534268.jpg"
+
+         ],
+         "Brand":"Givenchy",
+		 "Qty":"300",
+		 "Material":"Givenchy Leather"
+      },
+      {
+        "Name":"Small Antigona Leather Satchel",
+        "Price":3650,
+        "ProductId":"4902461",
+        "color":"Black",
+        "barcodeNo" : 20180904,
+        "description":"<p>Structured silhouette and flat base with protective feet for stability</p>",
+        "images":[
+           "../../assets/imgs/ProductImages/_103781227.jpg",
+           "../../assets/imgs/ProductImages/_103785194.jpg",
+           "../../assets/imgs/ProductImages/_103789669.jpg"
+
+        ],
+        "Brand":"Givenchy",
+        "Qty":"300",
+        "Material":"Givenchy Leather"
+     },
+     {
+        "Name":"Small Pandora Satchel",
+        "Price":1590,
+        "ProductId":"5019500",
+        "color":"Black",
+        "barcodeNo" : 20180905,
+        "description":"<p>The brand's immensely popular Pandora silhouette gets refreshed here in paint-spatter fabric, delivering a slightly more relaxed aesthetic.</p>",
+        "images":[
+           "../../assets/imgs/ProductImages/_103960530.jpg",
+           "../../assets/imgs/ProductImages/_103938797.jpg",
+           "../../assets/imgs/ProductImages/_103972553.jpg"
+
+        ],
+        "Brand":"Givenchy",
+        "Qty":"300",
+        "Material":"Givenchy Leather"
+     },
+     {
+        "Name":"Mini Antigona Patent Leather Satchel",
+        "Price":1950,
+        "ProductId":"4902465",
+        "color":"White",
+        "barcodeNo" : 20180906,
+        "description":"<p>Beloved by street-style mavens and well-polished women the world over, an iconic satchel is done here in crinkled patent deerskin, imparting subtle texture and shine to this classic, structured style.</p>",
+        "images":[
+           "../../assets/imgs/ProductImages/_103787118.jpg",
+           "../../assets/imgs/ProductImages/_103780852.jpg",
+           "../../assets/imgs/ProductImages/_103787258.jpg"
+
+        ],
+        "Brand":"Givenchy",
+        "Qty":"300",
+        "Material":"Givenchy Leather"
+     },
+     {
+        "Name":"GV3 Goatskin Leather Shoulder Bag",
+        "Price":2590,
+        "ProductId":"4902456",
+        "color":"Aubergine",
+        "barcodeNo" : 20180907,
+        "description":"<p>Part of artistic director Clare Waight Keller's debut handbag line for Givenchy, the GV3 offers luxe, polished style that belies its practical design.</p>",
+        "images":[
+           "../../assets/imgs/ProductImages/_103937573.jpg",
+           "../../assets/imgs/ProductImages/_103915885.jpg",
+           "../../assets/imgs/ProductImages/_103937524.jpg"
+
+        ],
+        "Brand":"Givenchy",
+        "Qty":"300",
+        "Material":"Goatskin Leather"
+     },
+     {
+        "Name":"Antigona Mini Midnight Star Satchel",
+        "Price":2290,
+        "ProductId":"4877667",
+        "color":"Heather Grey",
+        "barcodeNo" : 20180908,
+        "description":"<p>Beloved by street-style mavens and polished women the world over, Givenchy's Antigona satchel makes an edgy statement with gleaming star studs.</p>",
+        "images":[
+           "../../assets/imgs/ProductImages/_103162510.jpg",
+           "../../assets/imgs/ProductImages/_103160512.jpg",
+           "../../assets/imgs/ProductImages/_103162869.jpg"
+
+        ],
+        "Brand":"Givenchy",
+        "Qty":"300",
+        "Material":"Givenchy Leather"
+     },
+     {
+        "Name":"Mini Horizon Calfskin Leather Tote",
+        "Price":1990,
+        "ProductId":"4754309",
+        "color":"Off White",
+        "barcodeNo" : 20180909,
+        "description":"<p>A modern-minimalist tote shaped from smooth calfskin leather is detailed with signature logo embossing and accented by touches of gleaming logo hardware.</p>",
+        "images":[
+           "../../assets/imgs/ProductImages/_102103355.jpg",
+           "../../assets/imgs/ProductImages/_102088544.jpg",
+           "../../assets/imgs/ProductImages/_102103396.jpg"
+
+        ],
+        "Brand":"Givenchy",
+        "Qty":"300",
+        "Material":"Givenchy Leather"
+     },
+     {
+        "Name":"Mini Antigona Sugar Leather Satchel",
+        "Price":1790,
+        "ProductId":"4187605",
+        "color":"Bright Red",
+        "barcodeNo" : 20180910,
+        "description":"<p>The fan-favorite Antigona satchel is done in rich sugar leather, imparting subtle texture to this classic, structured style.</p>",
+        "images":[
+           "../../assets/imgs/ProductImages/_103502978.jpg",
+           "../../assets/imgs/ProductImages/_103499854.jpg",
+           "../../assets/imgs/ProductImages/_103503008.jpg"
+
+        ],
+        "Brand":"Givenchy",
+        "Qty":"300",
+        "Material":"Givenchy Leather"
+     }
+      
+      
+      
+   ]
+}
