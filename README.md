@@ -44,8 +44,7 @@ The blockchain side of the application will not record data unless a blockchain 
 	- Blockchain status - Check if the blockchain is up and running
 	- Blockchain version - Shows current version of the chaincode
 	- OIC connector - Check if the connector is running
-	- Single View - Check if the single view application is responding
-	- Siebel status - Current status of Siebel software
+
 
 
 ### Prerequisities
