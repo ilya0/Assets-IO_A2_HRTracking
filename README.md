@@ -1,7 +1,7 @@
 # Assets-IO_A2 Human Resources Applications tracking
 
 
-This application is designed in order for the HR and employees to be able track actions and documents for candidates, prospective employees and current employees from their inital hire to departure of employee.
+This application is designed for HR and employees to be able track actions and documents for candidates, prospective employees and current employees from their inital hire to departure of employee. These actions are to be also recorded into the blockchain in order allow for tracebility of actions, analytics and immutability of records.
 
 
 Main Priorities of this project:
@@ -74,7 +74,7 @@ The application is a multipart application which has three parts.
 
 Front end - Interfaces with the middleware inorder to show all the data 
 
-Middleware - interfaces with the blockchain and holds all the api interfaces
+Backend - interfaces with the blockchain and holds all the api interfaces
 
 Blockchain - records all the data for immutiblity 
 
@@ -97,20 +97,6 @@ This guide is made with the assumtion that a blockchain instance has already bee
 
 
 
-Checklist:
-
-
-To run the project:
-
-Start Backend 
-- Go to Backend folder
-- In terminal - NPM Start
-
-Start Front end :
-- Go to front end folder
-- NPM Start
-
-- Localhost:4200
 
 #### Starting the Backend
 
@@ -151,14 +137,7 @@ No test need to be ran at this time
 ##Unsolved problems, etc.
 
 - Cors issue is still not resolved
-- taleo integration (not done)
-- APIs to be used from taleo (undecided)
-- blockchain HCM (in progress, Ilya and Ravi)
-- blockchain Taleo (no clue)
-- Nodejs server to update HCM and blockchain (completed with Create, read, update operations for Employee and employee assignment, feel free to let me know more APIs from HCM we can use)
-- FrontEnd for this nodejs server will build on tuesday
-- get documents from employee using HCM (did not find any APIs for this)
-- do we have to make a get call everytime we make a post/patch call? (since we need the link url from the get call)
+- Styling
 
 ## Contributing
 
